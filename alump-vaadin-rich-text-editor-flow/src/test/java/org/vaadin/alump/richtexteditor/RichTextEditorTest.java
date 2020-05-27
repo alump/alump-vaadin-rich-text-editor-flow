@@ -1,4 +1,4 @@
-package com.vaadin.flow.component.richtexteditor;
+package org.vaadin.alump.richtexteditor;
 
 import static org.junit.Assert.assertEquals;
 
@@ -8,6 +8,7 @@ import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
+import org.vaadin.alump.richtexteditor.RichTextEditor;
 
 /**
  * Tests for the {@link RichTextEditor}.

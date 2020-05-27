@@ -4,15 +4,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.vaadin</groupId>
-        <artifactId>vaadin-rich-text-editor-flow-root</artifactId>
+        <groupId>org.vaadin.alump</groupId>
+        <artifactId>alump-vaadin-rich-text-editor-flow-root</artifactId>
         <version>2.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>vaadin-rich-text-editor-flow</artifactId>
+    <artifactId>alump-vaadin-rich-text-editor-flow</artifactId>
     <packaging>jar</packaging>
 
-    <name>Vaadin Rich Text Editor</name>
+    <name>Alump's Vaadin Rich Text Editor</name>
 
     <properties>
         <jetty.plugin.version>9.3.9.v20160517</jetty.plugin.version>
@@ -36,6 +36,7 @@
             <scope>provided</scope>
         </dependency>
 
+        <!--
         <dependency>
             <groupId>com.vaadin.webjar</groupId>
             <artifactId>vaadin-rich-text-editor</artifactId>
@@ -111,6 +112,7 @@
             <artifactId>iron-meta</artifactId>
             <version>2.1.1</version>
         </dependency>
+        -->
 
         <dependency>
             <groupId>junit</groupId>
@@ -180,7 +182,7 @@
                         <Vaadin-Package-Version>1</Vaadin-Package-Version>
                         <!-- Implementation-Title and Implementation-Version
                             come from the POM by default -->
-                        <Implementation-Title>Vaadin Rich Text Editor</Implementation-Title>
+                        <Implementation-Title>alump's Vaadin Rich Text Editor</Implementation-Title>
                         <_removeheaders>Built-By</_removeheaders>
                     </instructions>
                 </configuration>

@@ -1,4 +1,4 @@
-package com.vaadin.flow.component.richtexteditor;
+package org.vaadin.alump.richtexteditor;
 
 import com.vaadin.flow.testutil.ClassesSerializableTest;
 

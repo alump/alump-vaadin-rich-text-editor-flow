@@ -1,8 +1,7 @@
-package com.vaadin.flow.component.richtexteditor;
+package org.vaadin.alump.richtexteditor;
 
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.Div;
-import com.vaadin.flow.component.richtexteditor.RichTextEditor;
 import com.vaadin.flow.demo.DemoView;
 import com.vaadin.flow.router.Route;
 
@@ -22,7 +21,8 @@ public class RichTextEditorView extends DemoView {
     private void createDefaultEditor() {
         // begin-source-example
         // source-example-heading: Basic Rich Text Editor
-        RichTextEditor rte = new RichTextEditor();
+        RichTextEditor rte =
+                new RichTextEditor();
 
         add(rte);
         // end-source-example

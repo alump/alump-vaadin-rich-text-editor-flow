@@ -1,4 +1,4 @@
-package com.vaadin.flow.component.richtexteditor;
+package org.vaadin.alump.richtexteditor;
 
 /*
  * #%L
@@ -46,8 +46,8 @@ import java.util.Objects;
  * @author Vaadin Ltd
  *
  */
-@Tag("vaadin-rich-text-editor")
-@HtmlImport("frontend://bower_components/vaadin-rich-text-editor/src/vaadin-rich-text-editor.html")
+@Tag("alump-vaadin-rich-text-editor")
+//@HtmlImport("frontend://bower_components/alump-vaadin-rich-text-editor/src/alump-vaadin-rich-text-editor.html")
 public class RichTextEditor extends GeneratedVaadinRichTextEditor<RichTextEditor, String>
         implements HasSize, HasValueChangeMode, InputNotifier, KeyNotifier, CompositionNotifier {
 

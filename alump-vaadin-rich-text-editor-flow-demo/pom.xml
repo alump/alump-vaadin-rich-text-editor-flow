@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.vaadin</groupId>
-        <artifactId>vaadin-rich-text-editor-flow-root</artifactId>
+        <groupId>org.vaadin.alump</groupId>
+        <artifactId>alump-vaadin-rich-text-editor-flow-root</artifactId>
         <version>2.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>vaadin-rich-text-editor-flow-demo</artifactId>
+    <artifactId>alump-vaadin-rich-text-editor-flow-demo</artifactId>
     <packaging>${packaging.type}</packaging>
 
     <name>Vaadin Rich Text Editor Flow Demo</name>
@@ -43,10 +43,18 @@
         </dependency>
 
         <dependency>
-            <groupId>com.vaadin</groupId>
-            <artifactId>vaadin-rich-text-editor-flow</artifactId>
+            <groupId>org.vaadin.alump</groupId>
+            <artifactId>alump-vaadin-rich-text-editor-flow</artifactId>
             <version>${project.version}</version>
         </dependency>
+
+        <!--
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-rich-text-editor-flow</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+        -->
 
         <dependency>
             <groupId>com.vaadin</groupId>
