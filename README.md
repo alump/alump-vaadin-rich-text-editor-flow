@@ -1,3 +1,25 @@
+# This is alump's version for Vaadin Rich Text Editor for Flow
+
+See the webcomponent project at address:
+[github.com/alump/alump-vaadin-rich-text-editor](https://github.com/alump/alump-vaadin-rich-text-editor)
+
+**Notice:** This is for NPM projects only, not for Legacy Bower based projects.
+
+## Run flow side
+- Run `mvn clean install`
+- Run `mvn jetty:run-exploded -Pwar`
+
+If issues remove node_modules, package*.json and webpack.*.js under alump-vaadin-rich-text-editor-flow-demo
+folder and later command again.
+
+## Update flow side
+- See the NpmPackage annotation on GeneratedVaadinRichTextEditor class, update npm dependency number there
+- Update your flow versions with `mvn versions:set`
+- Build a zip for directory `mvn clean install -Pdirectory`
+- Go to Vaadin Directory and release the zip there
+
+This project is a fork of Vaadin Rich Text Editor for Flow. The following README is from original project.
+
 # Vaadin Rich Text Editor for Flow
 
 Vaadin Rich Text Editor for Flow is a UI component add-on for Vaadin which provides rich text editor functionality.
