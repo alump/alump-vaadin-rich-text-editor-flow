@@ -46,7 +46,8 @@ import java.util.Objects;
  */
 @Tag("alump-vaadin-rich-text-editor")
 public class RichTextEditor extends GeneratedVaadinRichTextEditor<RichTextEditor, String>
-        implements HasSize, HasValueChangeMode, InputNotifier, KeyNotifier, CompositionNotifier {
+        implements HasSize, HasValueChangeMode, InputNotifier, KeyNotifier, CompositionNotifier,
+        Focusable<RichTextEditor> {
 
     private ValueChangeMode currentMode;
     private RichTextEditorI18n i18n;
@@ -341,6 +342,24 @@ public class RichTextEditor extends GeneratedVaadinRichTextEditor<RichTextEditor
             asHtml = new AsHtml(this);
         }
         return asHtml;
+    }
+
+    /**
+     * Focuses editor, and moves cursor to given index. Notice that normal focus will try to recover the previous
+     * selection/focus positions.
+     * @param index Index to focus
+     */
+    public void focusToIndex(int index) {
+        getElement().callJsFunction("focus", index);
+    }
+
+    /**
+     * Select length of content from index
+     * @param index Index to start selection
+     * @param length Length of selection
+     */
+    public void select(int index, int length) {
+        getElement().callJsFunction("select", index, length);
     }
 
     /**

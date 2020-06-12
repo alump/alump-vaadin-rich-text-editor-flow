@@ -45,7 +45,6 @@ import com.vaadin.flow.component.HasStyle;
 import com.vaadin.flow.component.HasTheme;
 import com.vaadin.flow.component.Synchronize;
 import com.vaadin.flow.component.Tag;
-import com.vaadin.flow.component.dependency.HtmlImport;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.dependency.NpmPackage;
 import com.vaadin.flow.function.SerializableBiFunction;
@@ -211,7 +210,7 @@ import elemental.json.JsonArray;
         "WebComponent: Vaadin.RichTextEditorElement#1.0.0-alpha3",
         "Flow#1.2-SNAPSHOT" })
 @Tag("alump-vaadin-rich-text-editor")
-@NpmPackage(value = "@alump/alump-vaadin-rich-text-editor", version = "1.2.0-alump6")
+@NpmPackage(value = "@alump/alump-vaadin-rich-text-editor", version = "1.2.0-alump7")
 @JsModule("@alump/alump-vaadin-rich-text-editor/src/alump-vaadin-rich-text-editor.js")
 public abstract class GeneratedVaadinRichTextEditor<R extends GeneratedVaadinRichTextEditor<R, T>, T>
         extends AbstractSinglePropertyField<R, T>

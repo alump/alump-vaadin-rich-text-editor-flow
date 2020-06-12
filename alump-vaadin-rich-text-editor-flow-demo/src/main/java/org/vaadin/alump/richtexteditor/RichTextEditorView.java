@@ -7,6 +7,7 @@ import com.vaadin.flow.component.dialog.Dialog;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.notification.NotificationVariant;
+import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.demo.DemoView;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.component.confirmdialog.ConfirmDialog;
@@ -49,10 +50,14 @@ public class RichTextEditorView extends DemoView {
         rte.addServerButtonClickedListener(this::handleServerButtonClicked);
         rte.addDataEntryClickedListener(this::handleDataEntryClicked);
 
-        add(rte);
+        Button focus = new Button("Focus", e -> rte.focus());
+        Button focusToStart = new Button("Focus to start", e -> rte.focusToIndex(0));
+        Button selectFirst = new Button("Select first", e -> rte.select(0, 1));
+
+        add(rte, focus, focusToStart, selectFirst);
         // end-source-example
 
-        addCard("Basic Rich Text Editor", rte);
+        addCard("Basic Rich Text Editor", rte, focus, focusToStart, selectFirst);
     }
 
     private void handleServerButtonClicked(RichTextEditor.ServerButtonClickedEvent event) {
