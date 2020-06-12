@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.vaadin.alump</groupId>
         <artifactId>alump-vaadin-rich-text-editor-flow-root</artifactId>
-        <version>2.1.1-alump4</version>
+        <version>2.1.1-alump6</version>
     </parent>
 
     <artifactId>alump-vaadin-rich-text-editor-flow-demo</artifactId>

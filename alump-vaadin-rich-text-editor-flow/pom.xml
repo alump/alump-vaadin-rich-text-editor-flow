@@ -4,20 +4,50 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.vaadin.alump</groupId>
-        <artifactId>alump-vaadin-rich-text-editor-flow-root</artifactId>
-        <version>2.1.1-alump4</version>
+        <groupId>com.vaadin</groupId>
+        <artifactId>flow-component-base</artifactId>
+        <version>2.1.0</version>
+        <relativePath />
     </parent>
 
+    <groupId>org.vaadin.alump</groupId>
+    <version>2.1.1-alump6</version>
     <artifactId>alump-vaadin-rich-text-editor-flow</artifactId>
     <packaging>jar</packaging>
 
     <name>alump's Vaadin Rich Text Editor</name>
+    <inceptionYear>2018</inceptionYear>
+    <organization>
+        <name>Vaadin Ltd</name>
+        <url>http://vaadin.com/</url>
+    </organization>
 
     <properties>
         <jetty.plugin.version>9.3.9.v20160517</jetty.plugin.version>
         <powermock.version>1.7.1</powermock.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
+
+    <licenses>
+        <license>
+            <name>cval3</name>
+            <url>https://vaadin.com/license/cval-3</url>
+        </license>
+    </licenses>
+
+    <repositories>
+        <repository>
+            <id>vaadin-prereleases</id>
+            <url>https://maven.vaadin.com/vaadin-prereleases</url>
+        </repository>
+        <repository>
+            <id>vaadin-snapshot</id>
+            <url>https://oss.sonatype.org/content/repositories/vaadin-snapshots/</url>
+        </repository>
+    </repositories>
 
     <dependencies>
         <dependency>

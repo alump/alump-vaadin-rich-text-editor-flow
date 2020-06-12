@@ -211,7 +211,7 @@ import elemental.json.JsonArray;
         "WebComponent: Vaadin.RichTextEditorElement#1.0.0-alpha3",
         "Flow#1.2-SNAPSHOT" })
 @Tag("alump-vaadin-rich-text-editor")
-@NpmPackage(value = "@alump/alump-vaadin-rich-text-editor", version = "1.2.0-alump4")
+@NpmPackage(value = "@alump/alump-vaadin-rich-text-editor", version = "1.2.0-alump6")
 @JsModule("@alump/alump-vaadin-rich-text-editor/src/alump-vaadin-rich-text-editor.js")
 public abstract class GeneratedVaadinRichTextEditor<R extends GeneratedVaadinRichTextEditor<R, T>, T>
         extends AbstractSinglePropertyField<R, T>
