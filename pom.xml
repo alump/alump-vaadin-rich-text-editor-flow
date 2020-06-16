@@ -12,7 +12,7 @@
     <groupId>org.vaadin.alump</groupId>
     <artifactId>alump-vaadin-rich-text-editor-flow-root</artifactId>
     <packaging>pom</packaging>
-    <version>2.1.1-alump7</version>
+    <version>2.1.1-alump8</version>
     <name>alump's Vaadin Rich Text Editor Root</name>
     <inceptionYear>2018</inceptionYear>
     <organization>

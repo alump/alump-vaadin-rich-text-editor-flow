@@ -11,7 +11,7 @@
     </parent>
 
     <groupId>org.vaadin.alump</groupId>
-    <version>2.1.1-alump7</version>
+    <version>2.1.1-alump8</version>
     <artifactId>alump-vaadin-rich-text-editor-flow</artifactId>
     <packaging>jar</packaging>
 

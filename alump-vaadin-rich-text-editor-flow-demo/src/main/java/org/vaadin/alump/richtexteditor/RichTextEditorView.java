@@ -2,12 +2,14 @@ package org.vaadin.alump.richtexteditor;
 
 import com.vaadin.flow.component.ComponentEvent;
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.dependency.Uses;
 import com.vaadin.flow.component.dialog.Dialog;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.notification.NotificationVariant;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.demo.DemoView;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.component.confirmdialog.ConfirmDialog;
@@ -49,6 +51,7 @@ public class RichTextEditorView extends DemoView {
 
         rte.addServerButtonClickedListener(this::handleServerButtonClicked);
         rte.addDataEntryClickedListener(this::handleDataEntryClicked);
+        rte.setLinkEventListener(this::handleLinkClickedEvent);
 
         Button focus = new Button("Focus", e -> rte.focus());
         Button focusToStart = new Button("Focus to start", e -> rte.focusToIndex(0));
@@ -58,6 +61,10 @@ public class RichTextEditorView extends DemoView {
         // end-source-example
 
         addCard("Basic Rich Text Editor", rte, focus, focusToStart, selectFirst);
+    }
+
+    private void handleLinkClickedEvent(RichTextEditorLinkEvent event) {
+        new LinkDialog(event).open();
     }
 
     private void handleServerButtonClicked(RichTextEditor.ServerButtonClickedEvent event) {

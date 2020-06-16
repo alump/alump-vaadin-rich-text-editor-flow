@@ -52,6 +52,7 @@ public class RichTextEditor extends GeneratedVaadinRichTextEditor<RichTextEditor
     private ValueChangeMode currentMode;
     private RichTextEditorI18n i18n;
     private AsHtml asHtml;
+    protected Registration linkHandlerRegistration = null;
 
     @DomEvent("server-button-clicked")
     public static class ServerButtonClickedEvent extends ComponentEvent<RichTextEditor> {
@@ -315,6 +316,22 @@ public class RichTextEditor extends GeneratedVaadinRichTextEditor<RichTextEditor
         return ComponentUtil.addListener(this, DataEntryClickedEvent.class, listener);
     }
 
+    public void setLinkEventListener(ComponentEventListener<RichTextEditorLinkEvent> listener) {
+        if(linkHandlerRegistration != null) {
+            linkHandlerRegistration.remove();
+        }
+        this.linkHandlerRegistration = ComponentUtil.addListener(this, RichTextEditorLinkEvent.class, listener);
+        getElement().setProperty("emitlinkevents", true);
+    }
+
+    public void unsetLinkEventListener() {
+        if(linkHandlerRegistration != null) {
+            linkHandlerRegistration.remove();
+            linkHandlerRegistration = null;
+        }
+        getElement().removeProperty("emitlinkevents");
+    }
+
     /**
      * Insert dynamic data value element into text
      * @param id ID of dynamic data element
@@ -360,6 +377,45 @@ public class RichTextEditor extends GeneratedVaadinRichTextEditor<RichTextEditor
      */
     public void select(int index, int length) {
         getElement().callJsFunction("select", index, length);
+    }
+
+    RichTextEditorLinkEvent.ResponseChannel createLinkResponseChannel(final String origUrl) {
+        return new RichTextEditorLinkEvent.ResponseChannel() {
+
+            private boolean responseCalled = false;
+
+            @Override
+            public void apply(String url) {
+                if(responseCalled) {
+                    throw new IllegalStateException("Response already sent");
+                } else {
+                    getElement().callJsFunction("editLinkConfirm", Objects.requireNonNull(url));
+                    responseCalled = true;
+                }
+            }
+
+            @Override
+            public void remove() throws IllegalStateException {
+                if(responseCalled) {
+                    throw new IllegalStateException("Response already sent");
+                } else if(origUrl == null) {
+                    throw new IllegalStateException("Remove only allowed on existing links");
+                } else {
+                    getElement().callJsFunction("editLinkRemove");
+                    responseCalled = true;
+                }
+            }
+
+            @Override
+            public void cancel() {
+                if(responseCalled) {
+                    throw new IllegalStateException("Response already sent");
+                } else {
+                    getElement().callJsFunction("editLinkCancel");
+                    responseCalled = true;
+                }
+            }
+        };
     }
 
     /**
