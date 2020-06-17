@@ -18,7 +18,14 @@ folder and later command again.
 - Build a zip for directory `mvn clean install -Pdirectory`
 - Go to Vaadin Directory and release the zip there
 
-This project is a fork of Vaadin Rich Text Editor for Flow. The following README is from original project.
+This project is a fork of Vaadin Rich Text Editor for Flow.
+
+<hr>
+<hr>
+<span style="color:red">The following README is from the original project. Some parts do not apply to this project.</span>
+<hr>
+<hr>
+
 
 # Vaadin Rich Text Editor for Flow
 
